@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "42bd5c09-30ba-4f11-8efe-2170486e5a95",
+		"name": "fetch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "receipts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/receipts/cfecb38d-98a7-4deb-ad06-1ff40b140b9a/points",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"receipts",
+						"cfecb38d-98a7-4deb-ad06-1ff40b140b9a",
+						"points"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "receipts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"retailer\": \"M&M Corner Market\",\n  \"purchaseDate\": \"2022-03-\",\n  \"purchaseTime\": \"14:33\",\n  \"items\": [\n    {\n      \"shortDescription\": \"Gatorade\",\n      \"price\": \"2.25\"\n    },{\n      \"shortDescription\": \"Gatorade\",\n      \"price\": \"2.25\"\n    },{\n      \"shortDescription\": \"Gatorade\",\n      \"price\": \"2.25\"\n    },{\n      \"shortDescription\": \"Gatorade\",\n      \"price\": \"2.25\"\n    }\n  ],\n  \"total\": \"9.00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/receipts/process",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"receipts",
+						"process"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
